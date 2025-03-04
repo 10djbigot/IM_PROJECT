@@ -4,20 +4,23 @@
     box-sizing: border-box; 
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .nav {
     background-color: #ff9a00;
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
+    position: fixed;
 }
 
 .nav a {
@@ -31,57 +34,15 @@ body {
     background-color: #e68900;
 }
 
-.login {
-    position: absolute;
-    top: 20px;
-    right: 25px;
+.tran{
+    transition: all 1s ease-in-out;
 }
 
-.login a {
-    color: white;
-    text-decoration: none;
-    background-color: #ff9a00;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.login a:hover {
-    background-color: #e68900;
-}
-
-.banner {
-    max-width: 100%;
-    width: 100%;
-    height: auto; 
-    overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
-
-.info{
-    width: 100%;
-    height: 400px;
-    background-color: #efefef;
-}
-
-.stats{
-    background-color: white;
-    width: 100%;
-    height: 500px;
-}
 
 footer {
-    background-color: #f1f1f1; /* Light gray background */
+    background-color: #efefef; /* Light gray background */
     padding: 10px 0;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -100,6 +61,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px; /* Adds spacing between text and icons */
+    justify-content: center;
 }
 
 .contact img {
@@ -111,5 +73,10 @@ footer {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
-    justify-content: right;
+    text-align: center;
+    vertical-align: center;
 }
+
+
+
+
