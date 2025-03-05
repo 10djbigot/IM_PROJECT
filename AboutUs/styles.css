@@ -7,6 +7,7 @@
 html, body {
     height: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
     background-color: #788daa;
     flex-direction: column;
     display: flex;
@@ -23,6 +24,7 @@ html, body {
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 1;
 }
 
 .nav a {
@@ -43,6 +45,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    padding-top: 60px;
 }
  
 .info-text{
@@ -52,7 +55,8 @@ html, body {
     overflow-wrap: break-word;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 70px;
+    padding-left: 70px;
+    margin-top: 10px;
 }
  
 .info h1{
@@ -65,9 +69,10 @@ html, body {
 }
  
 .picture{
-    height: 100%;
     right: 0;
-    margin-top: 60px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
     
 }
 
@@ -81,6 +86,8 @@ html, body {
     background-color: #efefef; /* Light gray background */
     padding: 10px 0;
     width: 100vw;
+   position: fixed;
+   bottom: 0;
 }
 
 .footer-container {
