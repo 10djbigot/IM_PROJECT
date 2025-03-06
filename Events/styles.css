@@ -5,7 +5,7 @@ html, body {
     width: 100%;
     display: flex;
     overflow-y: hidden;
-    background-color:#788daa;
+    background-color:#415a78;
 }
 body{
     display: flex;
@@ -106,21 +106,31 @@ body{
 }
 
 .upper-row{
-    height: 400px;
+    height: 350px;
+    margin-left: 30px;
 }
 
 .lower-row {
-    height: 300px; /* Set a fixed height, adjust as needed */
+    height: 400px; /* Set a fixed height, adjust as needed */
+
 }
 
 .upper-row img, .lower-row img {
     max-height: 250px; /* Ensures images fit within the row */
 }
 
+.lower-row img{
+    margin-right: 40px;
+}
+
 .up {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    justify-content: left;
 }
+
+
 
 .current {
     font-size: 24px;
