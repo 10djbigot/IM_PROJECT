@@ -8,17 +8,38 @@
     <link rel="icon" type="image/x-icon" href="logo.png" class="logo">
 </head>
 <body>
+    <div class="header">
+        <img src="/Events/logo.png" class="logo1">
+        <header>Philippine Federation of Catholic Married Pariests(PFMCP)</header>
+    </div>
     <div class="nav">
         <a href="https://10djbigot.github.io/IM_PROJECT/" class="tran">Home</a>
-        <a href="#activities">Events</a>
-        <a href="AboutUs\index.html">About Us</a>
-
-        <div class="login">
-            <a href="#">Log In</a>
+        <a href="/Events/index.html">Events</a>
+        <a href="/AboutUs/index.html">About Us</a>
+    </div>
+    
+    <div class="events-container">
+        <!-- First Row: Upcoming Events (Darker Blue) -->
+        <div class="event-box upper-row">
+            <img src="Iloilo.jpg" id="eventImage" onclick="changeUpcomingEvent()">
+        </div>
+        <div class="event-text-box upper-row">
+            <h1 class="up">Upcoming Events</h1>
+            <p id="eventText">17th PFMCP National Convention in Iloilo City <br>April 13, 2023</p>
+        </div>
+    
+        <!-- Second Row: Current Events (Lighter Blue) -->
+        <div class="event-text-box lower-row">
+            <h1 class="current">Current Events</h1>
+            <p id="currentEventText">Davao Agape Married Priests Association Christmas Celebration 2023 <br>December 10, 2023</p>
+        </div>
+        <div class="event-box lower-row">
+            <img src="18th.jpg" id="currentEventImage" onclick="changeCurrentEvent()">
         </div>
     </div>
-    <p class="h" id="home"></p>
     
+
+    <script src="script.js"></script>
     <footer>
         <div class="contact">
             <div>Contact Us: </div>
@@ -28,6 +49,5 @@
 
         <div class="rights">All Rights Reserved made with love and closer to God</div>
     </footer>
-
 </body>
 </html>
