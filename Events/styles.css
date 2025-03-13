@@ -60,10 +60,11 @@ body{
 }
 .events-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-columns: 1fr 2fr; /* Two columns */
     grid-template-rows: auto auto; /* Two rows */
     width: 100%;
     height: 70%;
+    align-items: stretch;
 }
 
 .event-box {
@@ -83,7 +84,7 @@ body{
     background-color: #788daa; /* Lighter Blue */
     color: white;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
 }
 
@@ -97,12 +98,15 @@ body{
 
 .event-text-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-evenly;
+    font-size: 20px;
+    min-height: 80px;
 }
 
 .upper-row{
@@ -116,23 +120,29 @@ body{
 }
 
 .upper-row img, .lower-row img {
-    max-height: 250px; /* Ensures images fit within the row */
+    max-height: 300px; /* Ensures images fit within the row */
 }
 
 .lower-row img{
-    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .up {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    width: 250px;
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-
-
 .current {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    width: 250px;
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 footer {
@@ -173,4 +183,90 @@ footer {
     color: #333;
     text-align: center;
     vertical-align: center;
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Ensure event-box is positioned correctly */
+.event-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden; /* Keep overlay inside the image */
+}
+
+/* Dark overlay effect on the image only */
+.event-box img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+    filter: brightness(40%); /* Initial dark overlay */
+}
+
+/* When hovered, remove the dark overlay */
+.event-box:hover img {
+    filter: brightness(100%); /* Fully visible */
+}
+
+/* Show arrows only when hovering over the event-box */
+.event-box:hover .arrow {
+    opacity: 1;
+}
+
+/* Initially hidden arrows */
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Arrow hover effect */
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Positioning for arrows */
+.left-arrow {
+    left: 5px;
+}
+
+.right-arrow {
+    right: 5px;
 }

@@ -14,28 +14,32 @@
     </div>
     <div class="nav">
         <a href="index.html" class="tran">Home</a>
-        <a href="Events/index.html">Events</a>
-        <a href="AboutUs/index.html">About Us</a>
+        <a href="/Events/index.html">Events</a>
+        <a href="/AboutUs/index.html">About Us</a>
     </div>
     
     <div class="events-container">
-        <!-- First Row: Upcoming Events (Darker Blue) -->
         <div class="event-box upper-row">
-            <img src="Iloilo.jpg" id="eventImage" onclick="changeUpcomingEvent()">
+            <button class="arrow left-arrow" onclick="changeUpcomingEvent(-1)">&#10094;</button>
+            <img src="Iloilo.jpg" id="eventImage">
+            <button class="arrow right-arrow" onclick="changeUpcomingEvent(1)">&#10095;</button>
         </div>
         <div class="event-text-box upper-row">
-            <h1 class="up">Upcoming Events</h1>
             <p id="eventText">17th PFMCP National Convention in Iloilo City <br>April 13, 2023</p>
+            <h1 class="up">Upcoming Events</h1>
         </div>
-    
-        <!-- Second Row: Current Events (Lighter Blue) -->
-        <div class="event-text-box lower-row">
-            <h1 class="current">Current Events</h1>
-            <p id="currentEventText">Davao Agape Married Priests Association Christmas Celebration 2023 <br>December 10, 2023</p>
-        </div>
+        
         <div class="event-box lower-row">
-            <img src="18th.jpg" id="currentEventImage" onclick="changeCurrentEvent()">
+            <button class="arrow left-arrow" onclick="changeCurrentEvent(-1)">&#10094;</button>
+            <img src="18th.jpg" id="currentEventImage">
+            <button class="arrow right-arrow" onclick="changeCurrentEvent(1)">&#10095;</button>
         </div>
+        <div class="event-text-box lower-row">
+            <p id="currentEventText">Davao Agape Married Priests Association Christmas Celebration 2023 <br>December 10, 2023</p>
+            <h1 class="current">Current Events</h1>
+        </div>
+        
+        
     </div>
     
 

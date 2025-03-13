@@ -4,22 +4,22 @@ const upcomingEvents = [
 ];
 
 const currentEvents = [
-    { img: "18th.jpg", text: "16th PFMCP National Convention in Manila <br>March 10, 2022" },
-    { img: "16th.jpg", text: "15th PFMCP National Convention in Baguio City <br>February 5, 2021" },
-    { img: "15th.jpg", text: "14th PFMCP National Convention in Quezon City <br>January 8, 2020" }
+    { img: "18th.jpg", text: "PFMCP VisMin Regional Convention <br>October 18, 2024" },
+    { img: "16th.jpg", text: "16th National Convention of the Philippine Federation of Married Catholic Priests <br>February 5, 2021" },
+    { img: "15th.jpg", text: "15th National Convention of the Philippine Married Catholic Priests <br>April 16, 2024" }
 ];
 
 let upcomingIndex = 0;
 let currentIndex = 0;
 
-function changeUpcomingEvent() {
-    upcomingIndex = (upcomingIndex + 1) % upcomingEvents.length;
+function changeUpcomingEvent(direction) {
+    upcomingIndex = (upcomingIndex + direction + upcomingEvents.length) % upcomingEvents.length;
     document.getElementById("eventImage").src = upcomingEvents[upcomingIndex].img;
     document.getElementById("eventText").innerHTML = upcomingEvents[upcomingIndex].text;
 }
 
-function changeCurrentEvent() {
-    currentIndex = (currentIndex + 1) % currentEvents.length;
+function changeCurrentEvent(direction) {
+    currentIndex = (currentIndex + direction + currentEvents.length) % currentEvents.length;
     document.getElementById("currentEventImage").src = currentEvents[currentIndex].img;
     document.getElementById("currentEventText").innerHTML = currentEvents[currentIndex].text;
 }
